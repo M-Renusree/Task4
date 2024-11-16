@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Blog & Portfolio</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #3a6186, #89253e);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Navbar Styles */
+        header {
+            background: #1b1b1b;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            color: #64ffda;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-style: inherit;
+        }
+        nav {
+            background: #333;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        nav a {
+            color: #64ffda;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        /* Section Styling */
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* About Section */
+        #about h2, #skills h2, #projects h2, #contact h2, #todo h2, #products h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #64ffda;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-style: inherit;
+            font-weight: bold;
+    
+        }
+        
+            
+
+        /* Skills Section */
+        #skills ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+        #skills li {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Project Cards */
+        .project-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+        .project-card img {
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            color: #64ffda;
+            text-align: center;
+        }
+        .project-card p {
+            font-size: 1rem;
+            color: #fff;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* To-Do List Section */
+        .todo-list {
+            background: rgba(10, 25, 47, 0.8);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        /* Product Listing Section */
+        .product-list {
+            background: rgba(10, 25, 47, 0.8);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        /* Button & Input Styles */
+        button, select, input[type="text"], textarea {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            background: #64ffda;
+            color: #333;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        button:hover, select:hover, input[type="text"]:focus, textarea:focus {
+            background: #52e6b8;
+            outline: none;
+        }
+
+        /* Image Styling */
+        .profile-image {
+            width: 50%;
+           
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Heading -->
+    <header>
+        <h1> Portfolio</h1>
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div style="text-align: center;">
+        <img src="profile img.jfif" alt="Profile Image" class="profile-image">
+        </div>
+        <p>
+            Hello! I'm a passionate developer and adventure enthusiast. This portfolio showcases my skills, projects, and interests in both technology and travel. I love creating websites that are functional and visually appealing, and I enjoy exploring new places to draw inspiration for my designs.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Python</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        
+        <!-- Project 1 -->
+        <div class="project-card" data-category="adventure">
+            <img src="adventure.png" alt="Project 1 Image">
+            <h3>Adventure Blog</h3>
+            <p>A blog showcasing travel experiences, complete with dynamic elements and an interactive layout.</p>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-category="leisure">
+            <img src="coffee.webp" alt="Project 2 Image">
+            <h3>Coffee shop Website</h3>
+            <p>A fully responsive restaurant website built using HTML, CSS, and JavaScript.</p>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-category="adventure">
+            <img src="quiz.jfif" alt="Project 3 Image">
+            <h3>Quizly Shine App</h3>
+            <p>A website dedicated to the beauty of safaris and wildlife, featuring responsive design and interactive maps.</p>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" data-category="leisure">
+            <img src="tour.jfif" alt="Project 4 Image">
+            <h3>City Tour App</h3>
+            <p>Explore cities with this app, which allows users to find attractions, hotels, and restaurants with ease.</p>
+        </div>
+        
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+       
+        <form action="#">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your name " required><br><br>
+
+            <label for="email">Your Email:</label>
+            <input type="text" id="email" placeholder="Enter your email " required><br><br>
+
+            <label for="message">Your Message:</label>
+            <input type="text" id="message" placeholder="Enter your message" required><br><br>
+
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Product Listing Section -->
+    <section id="products">
+        <h2>Product Listing</h2>
+        <label for="filter">Filter by Category:</label>
+        <select id="filter" onchange="filterProjects()">
+            <option value="all">All</option>
+            <option value="adventure">Adventure</option>
+            <option value="leisure">Leisure</option>
+        </select>
+        
+        <div id="productList" class="product-list">
+            <!-- Dynamic Product Cards will appear here -->
+        </div>
+    </section>
+
+    <!-- To-Do List Section -->
+    <section id="todo">
+        <h2>To-Do List</h2>
+        <div class="todo-list">
+            <input type="text" id="taskInput" placeholder="Add a new task">
+            <button onclick="addTask()">Add Task</button>
+            <ul id="taskList"></ul>
+        </div>
+    </section>
+
+    <script>
+        // Projects Data
+        const projects = [
+            { name: "Adventure Blog", category: "adventure", image: "adventure.png" },
+            { name: "Coffee shop website", category: "leisure", image: "coffee.webp" },
+            { name: "Quizly shine", category: "adventure", image: "quiz.jfif" },
+            { name: "City Tour App", category: "leisure", image: "tour.jfif" }
+        ];
+
+        function filterProjects() {
+            const filter = document.getElementById("filter").value;
+            const filteredProjects = filter === "all" ? projects : projects.filter(p => p.category === filter);
+            displayProjects(filteredProjects);
+        }
+
+        function displayProjects(filteredProjects = projects) {
+            const productList = document.getElementById("productList");
+            productList.innerHTML = "";
+            filteredProjects.forEach(project => {
+                const div = document.createElement("div");
+                div.className = "project-card";
+                div.innerHTML = `
+                    <img src="${project.image}" alt="${project.name}">
+                    <h3>${project.name}</h3>
+                    <p>${project.name} description...</p>
+                `;
+                productList.appendChild(div);
+            });
+        }
+
+        displayProjects();
+
+        // To-Do List Functionality
+        const tasks = [];
+
+        function addTask() {
+            const taskInput = document.getElementById("taskInput");
+            if (taskInput.value !== "") {
+                tasks.push(taskInput.value);
+                taskInput.value = "";
+                displayTasks();
+            }
+        }
+
+        function deleteTask(index) {
+            tasks.splice(index, 1);
+            displayTasks();
+        }
+
+        function displayTasks() {
+            const taskList = document.getElementById("taskList");
+            taskList.innerHTML = "";
+            tasks.forEach((task, index) => {
+                const li = document.createElement("li");
+                li.textContent = task;
+                const deleteBtn = document.createElement("button");
+                deleteBtn.textContent = "Delete";
+                deleteBtn.onclick = () => deleteTask(index);
+                li.appendChild(deleteBtn);
+                taskList.appendChild(li);
+            });
+        }
+
+        displayTasks();
+    </script>
+
+</body>
+</html>
